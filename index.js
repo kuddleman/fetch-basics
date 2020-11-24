@@ -1,10 +1,17 @@
 console.log("hello")
 console.log("This is cool")
 
-fetch('example.txt')
-.then( response => response.text()) // returns promise
-.then(text => console.log(text)) // gets the text from the promise
+// fetch('example.txt')
+// .then( response => response.text()) // returns promise
+// .then(text => console.log(text)) // gets the text from the promise
 
+const getExample = async () => {
+  const response = await fetch('example.txt')
+  const data = await response.text()
+  console.log(data)
+}
+
+getExample()
 
 
 
