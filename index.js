@@ -5,6 +5,9 @@ fetch('example.txt')
 .then( response => response.text()) // returns promise
 .then(text => console.log(text)) // gets the text from the promise
 
+
+
+
 fetch('people.json')
 .then( response => response.json())
 .then(json => {
@@ -14,6 +17,7 @@ fetch('people.json')
     document.body.appendChild(div)
   })
 })
+.catch( err => console.error(err) )
 
 // Fetch an image from https://jsonplaceholder.typicode.com/photos/1. The response will be in a JSON. You'll need to access the "url" property, then pass that into the img tag.
 
